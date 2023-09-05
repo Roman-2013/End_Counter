@@ -1,0 +1,34 @@
+
+
+.counter {
+    width: 200px;
+    height: 154.02px;
+    border: 1.5px solid #7fd3ef;
+    border-radius: 5px;
+
+}
+
+.buttonsWindow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 180px;
+    height: 50px;
+    border: 1.5px solid #7fd3ef;
+    border-radius: 5px;
+    margin: 10px;
+}
+.settingsWindow{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+    height: 70px;
+    border: 1.5px solid #7fd3ef;
+    border-radius: 5px;
+    background-color: #292c35;
+    margin: 10px;
+}

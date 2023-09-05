@@ -1,17 +1,4 @@
-.basic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
-.counter {
-    width: 200px;
-    height: 154.02px;
-    border: 1.5px solid #7fd3ef;
-    border-radius: 5px;
-
-}
 
 .window {
     display: flex;
@@ -21,34 +8,19 @@
     height: 70px;
     border: 1.5px solid #7fd3ef;
     border-radius: 5px;
-    background-color: #63dbfd;
+    background-color:#292c35;
     margin: 10px;
 
 }
 .number{
     font-size: 40px;
     font-weight: bolder;
+     color:#7fd3ef;
+}
+.string{
+    font-size: 13px;
+}
+.numberRed{
+    color: #f03
 }
 
-.buttonsWindow {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    width: 180px;
-    height: 50px;
-    border: 1.5px solid #7fd3ef;
-    border-radius: 5px;
-    margin: 10px;
-}
-
-.button {
-    width: 70px;
-    background-color: #63dbfd;
-    border: 1.5px solid #7fd3ef;
-    border-radius: 5px;
-    font-weight: 1000;
-    font-size: 20px;
-    padding: 0;
-
-}

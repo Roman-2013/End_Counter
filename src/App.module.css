@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+.basic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap:40px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter {
+    width: 200px;
+    height: 154.02px;
+    border: 1.5px solid #7fd3ef;
+    border-radius: 5px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonsWindow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 180px;
+    height: 50px;
+    border: 1.5px solid #7fd3ef;
+    border-radius: 5px;
+    margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button {
+    width: 70px;
+    background-color: #63dbfd;
+    border: 1.5px solid #7fd3ef;
+    border-radius: 5px;
+    font-weight: 1000;
+    font-size: 20px;
+    padding: 0;
+    color: #292c35; ;
 }
-
-.App-link {
-  color: #61dafb;
+button:disabled{
+    background-color: #407284; /* Серый цвет для дизейбла */
+    border-color:#407284; /* Серый цвет границы для дизейбла */
+    cursor: not-allowed;
 }
+button:active {
+    background-color: #292c35;
+    border-color:#292c35;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
