@@ -70,7 +70,6 @@ export const setMinAC=(count:number)=>{
         type:'SET-MIN',count
     }as const
 }
-
 export const setMaxAC=(count:number)=>{
     return {
         type:'SET-MAX',count

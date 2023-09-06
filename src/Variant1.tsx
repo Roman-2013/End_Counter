@@ -32,7 +32,7 @@ function Variant1() {
 
     return (
         <Routes>
-            <Route path={'//Counter1'} element={<div className={s.basic}>
+            <Route path={'/Counter1'} element={<div className={s.basic}>
                 <Settings
                     min={min}
                     max={max}
