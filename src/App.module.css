@@ -4,7 +4,8 @@
 }
 .appButton{
     margin: 0px 10px 0 10px;
-    width: 100px;
+    width: 150px;
+    height: 70px;
     background-color: #292c35;
     border: 1.5px solid #7fd3ef;
     border-radius: 5px;
@@ -23,7 +24,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     gap:40px
 }
 

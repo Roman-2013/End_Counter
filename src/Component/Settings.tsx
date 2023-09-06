@@ -2,72 +2,64 @@ import React, {useEffect, useState} from 'react';
 import s from './Settings.module.css'
 import {Button} from './Button';
 import {Input} from './Input';
+import {useDispatch} from 'react-redux';
+import {setDisabledStatusAC, setIncorrectMaxAC, setIncorrectMinAC, setMaxAC, setMinAC} from '../state/Variant1-reducer';
 
 type SettingsPropsType = {
     min: number
     max: number
-    setMax: (value: number) => void
-    setMin: (value: number) => void
     disabledStatus: boolean
-    setDisabledStatus: (disabledStatus: boolean) => void
     incorrectMax: boolean
-    setIncorrectMax: (incorrectMax: boolean) => void
     incorrectMin:boolean
-    setIncorrectMin:(incorrectMin:boolean)=>void
 
 }
 
 export const Settings = (props: SettingsPropsType) => {
 
-    let {min, max, setMax, setMin, setDisabledStatus, disabledStatus, setIncorrectMax, incorrectMax,incorrectMin,setIncorrectMin} = props
-
-
-
-
+    let {min, max, disabledStatus , incorrectMax,incorrectMin} = props
+    const dispatch=useDispatch()
 
     const setMaxValueHandler = (value: number) => {
-        setMax(value)
-        setDisabledStatus(false)
-        setIncorrectMax(false)
-        setIncorrectMin(false)
-
-
+        dispatch(setMaxAC(value))
+        dispatch(setDisabledStatusAC(false))
+        dispatch(setIncorrectMaxAC(false))
+        dispatch(setIncorrectMinAC(false))
         if (value < 0 ) {
-            setIncorrectMax(true)
+            dispatch(setIncorrectMaxAC(true))
         }
          if(value <= min){
-            setIncorrectMax(true)
-            setIncorrectMin(true)
+             dispatch(setIncorrectMaxAC(true))
+             dispatch(setIncorrectMinAC(true))
         }
          if(min<0){
-            setIncorrectMin(true)
+             dispatch(setIncorrectMinAC(true))
         }
     }
 
 
     const setMinValueHandler = (value: number) => {
-        setMin(value)
-        setDisabledStatus(false)
-        setIncorrectMin(false)
-        setIncorrectMax(false)
+        dispatch(setMinAC(value))
+        dispatch(setDisabledStatusAC(false))
+        dispatch(setIncorrectMinAC(false))
+        dispatch(setIncorrectMaxAC(false))
 
         if (value < 0 ) {
-            setIncorrectMin(true)
+            dispatch(setIncorrectMinAC(true))
         }
         if( value >= max){
-            setIncorrectMin(true)
-            setIncorrectMax(true)
+            dispatch(setIncorrectMinAC(true))
+            dispatch(setIncorrectMaxAC(true))
         }
         if(max<0){
-            setIncorrectMax(true)
+            dispatch(setIncorrectMaxAC(true))
         }
     }
 
 
     const buttonHandler = () => {
-        setDisabledStatus(true)
-        localStorage.setItem('minimal', min.toString())
-        localStorage.setItem('maximal', max.toString())
+        dispatch(setDisabledStatusAC(true))
+        // localStorage.setItem('minimal', min.toString())
+        // localStorage.setItem('maximal', max.toString())
     }
 
     return (
