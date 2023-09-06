@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import s from './Settings.module.css'
-import {Button} from './Button';
-import {Input} from './Input';
+import s from './Settings2.module.css'
+
+
+import {Button2} from './Button2';
+import {Input2} from './Input2';
+import {NavLink} from 'react-router-dom';
 
 type SettingsPropsType = {
     min: number
@@ -17,7 +20,7 @@ type SettingsPropsType = {
 
 }
 
-export const Settings = (props: SettingsPropsType) => {
+export const Settings2 = (props: SettingsPropsType) => {
 
     let {min, max, setMax, setMin, setDisabledStatus, disabledStatus, setIncorrectMax, incorrectMax,incorrectMin,setIncorrectMin} = props
 
@@ -73,13 +76,13 @@ export const Settings = (props: SettingsPropsType) => {
     return (
         <div className={s.counter}>
             <div className={s.settingsWindow}>
-                <Input
+                <Input2
                     incorrect={incorrectMax}
                     nameSpan={'max value'}
                     callback={setMaxValueHandler}
                     value={max}
                 />
-                <Input
+                <Input2
                     incorrect={incorrectMin}
                     nameSpan={'min value'}
                     callback={setMinValueHandler}
@@ -87,11 +90,13 @@ export const Settings = (props: SettingsPropsType) => {
                 />
             </div>
             <div className={s.buttonsWindow}>
-                <Button
-                    disabled={incorrectMax || disabledStatus || incorrectMin}
+                <NavLink to={'/Counter2'}>
+                    <Button2
+                    disabled={false}
                     name={'Set'}
                     callback={buttonHandler}
                 />
+                </NavLink>
             </div>
         </div>
     );

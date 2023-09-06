@@ -1,13 +1,14 @@
 import React from 'react';
-import s from '../App.module.css';
+import s from './App2.module.css';
 //кидать вместе с дефолтными пропсами
 type ButtonType = {
     name: string
     callback: () => void
     disabled: boolean
+
 }
 
-export const Button:React.FC<ButtonType> = ({name, callback, disabled,...restProps}) => {
+export const Button2:React.FC<ButtonType> = ({name, callback, disabled,...restProps}) => {
     return (
         <div>
             <button

@@ -1,0 +1,18 @@
+.inputContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.inputInput{
+    width: 50px;
+    text-align: center;
+}
+.inputSpan{
+    margin-right: 35px;
+    color: #7fd3ef;
+    font-weight: bold;
+    font-size: 15px;
+}
+.colorRed{
+    background-color: #d77f7f;
+    border-color: #a23d3d;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Input.module.css'
+import s from './Input2.module.css'
 //
 type InputPropsType = {
     value: number
@@ -8,7 +8,7 @@ type InputPropsType = {
     incorrect: boolean
 
 }
-export const Input: React.FC<InputPropsType> = ({value,callback,nameSpan,incorrect,...restProps}) => {
+export const Input2: React.FC<InputPropsType> = ({value,callback,nameSpan,incorrect,...restProps}) => {
 
     return (
         <div className={s.inputContainer}>

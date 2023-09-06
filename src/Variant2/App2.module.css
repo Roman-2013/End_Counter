@@ -1,24 +1,5 @@
-.appContainer{
-    text-align: center;
-    padding: 30px 20px 0 20px;
-}
-.appButton{
-    margin: 0px 10px 0 10px;
-    width: 100px;
-    background-color: #292c35;
-    border: 1.5px solid #7fd3ef;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 17px;
-    color: #7fd3ef; ;
-}
-body{
-    background-color: #292c35;
-}
 
 
-
-/*///////////////////////////////////////////////////////////*/
 .basic {
     display: flex;
     justify-content: center;
@@ -28,8 +9,8 @@ body{
 }
 
 .counter {
-    width: 200px;
-    height: 154.02px;
+    width: 300px;
+    height: 200px;
     border: 1.5px solid #7fd3ef;
     border-radius: 5px;
 
@@ -40,8 +21,8 @@ body{
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    width: 180px;
-    height: 50px;
+    width: 280px;
+    height: 66px;
     border: 1.5px solid #7fd3ef;
     border-radius: 5px;
     margin: 10px;
@@ -49,6 +30,7 @@ body{
 
 .button {
     width: 70px;
+    height: 35px;
     background-color: #63dbfd;
     border: 1.5px solid #7fd3ef;
     border-radius: 5px;

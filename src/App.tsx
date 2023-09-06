@@ -1,57 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import s from './App.module.css';
-import {Counter} from './Component/Counter';
-import {Settings} from './Component/Settings';
+
+import Variant1 from './Variant1';
+import Variant2 from './Variant2/Variant2';
+import {NavLink} from 'react-router-dom';
+import {Button} from './Component/Button';
 
 function App() {
-
-    //let errors={1:'enter values and press \'set\'',2:'Incorrect value'}
-
-    const [count, setCount] = useState(0)
-    const [min, setMin] = useState(Number(localStorage.getItem('minimal')))
-    const [max, setMax] = useState(Number(localStorage.getItem('maximal')))
-    const [disabledStatus,setDisabledStatus]=useState(true)
-    const [incorrect,setIncorrect]=useState(false)
+    const[example,setExample]=useState('Variant1')
+return (
+    <div className={s.appContainer}>
+        <NavLink to={'/'}><button className={s.appButton} onClick={()=>setExample('Variant1')}>Variant1</button></NavLink>
+        <NavLink to={'/Counter2'}><button className={s.appButton} onClick={()=>setExample('Variant2')}>Variant2</button></NavLink>
 
 
-    useEffect(()=>{
-       setCount(min)
-    },[min])
+        {example==='Variant1'?<Variant1/>:example==='Variant2'?<Variant2/>:''}
+    </div>
+)
 
-
-    const incHandler = () => {
-        if (count < max) {
-            setCount(count + 1)
-        }
-    }
-    const resetHandler = () => {
-        setCount(min)
-    }
-
-
-    return (
-        <div className={s.basic}>
-            <Settings
-                min={min}
-                max={max}
-                setMin={setMin}
-                setMax={setMax}
-                disabledStatus={disabledStatus}
-                setDisabledStatus={setDisabledStatus}
-                incorrect={incorrect}
-                setIncorrect={setIncorrect}
-
-            />
-            <Counter
-                disabledStatus={disabledStatus}
-                max={max}
-                count={count}
-                incHandler={incHandler}
-                resetHandler={resetHandler}
-                incorrect={incorrect}
-            />
-        </div>
-    );
 }
 
 export default App;

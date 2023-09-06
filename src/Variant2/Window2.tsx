@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Window.module.css'
+import s from './Window2.module.css'
 type WindowType={
     count:number
     disabledStatus:boolean
@@ -7,12 +7,11 @@ type WindowType={
     incorrectMin:boolean
     max:number
 }
-export const Window = (props:WindowType) => {
-    const {count,disabledStatus,incorrectMin,incorrectMax,max}=props
+export const Window2:React.FC<WindowType> = ({count,disabledStatus,incorrectMin,incorrectMax,max}) => {
     return (
         <div className={s.window}>
             <span
-                className={`${s.number} ${count===max && disabledStatus ?s.numberRed:''} ${disabledStatus?'':s.string} ${incorrectMin?s.numberRed:incorrectMax?s.numberRed:''}` }>
+                className={`${s.number} ${count===max?s.numberRed:''} ${disabledStatus?'':s.string} ${incorrectMin?s.numberRed:incorrectMax?s.numberRed:''}` }>
                 {incorrectMin?'Incorrect value!':incorrectMax?'Incorrect value!':disabledStatus?count:'enter values and press \'set\''}
             </span>
         </div>
