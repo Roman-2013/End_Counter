@@ -42,7 +42,6 @@ export const variant1Reducer=(state:StateType=initialState, action:ActionVariant
 
             return {...state,count:action.count}
         case 'SET-MIN':
-
             return {...state,min:action.count}
         case 'SET-MAX':
             return {...state,max:action.count}

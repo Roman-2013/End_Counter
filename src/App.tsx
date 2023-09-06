@@ -16,7 +16,7 @@ function App() {
                     Variant 1<br/> (with Redux)
                 </button>
             </NavLink>
-            <NavLink to={'/Counter2'}><button
+            <NavLink  to={'/Counter2'}><button
                     className={s.appButton}
                     onClick={() => setExample('Variant2 (without Redux)')}>
                     Variant 2 (without Redux)

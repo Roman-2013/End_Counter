@@ -11,12 +11,12 @@ function Variant1() {
 
     const stateVariant1 = useSelector<AppRootStateType, StateType>(state => state.variant1)
     const dispatch = useDispatch()
+
     const {min, max, incorrectMin, incorrectMax, disabledStatus, count} = stateVariant1
 
 
     useEffect(() => {
         dispatch(setCountAC(min))
-
     }, [min, incorrectMax, incorrectMin])
 
 
